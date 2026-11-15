@@ -1,0 +1,263 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #10130f;
+    color: #f1f1ec;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+}
+
+header {
+    margin-bottom: 35px;
+}
+
+header h1 {
+    font-size: 38px;
+    letter-spacing: -1px;
+}
+
+header h1 span {
+    color: #a4bd72;
+}
+
+header p {
+    color: #92998a;
+    margin-top: 8px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: #1b2119;
+    padding: 22px;
+    border: 1px solid #303a2b;
+    border-radius: 14px;
+}
+
+.stat-card h3 {
+    font-size: 30px;
+    color: #a4bd72;
+}
+
+.stat-card p {
+    color: #a1a69b;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.todo-box {
+    background: #1b2119;
+    border: 1px solid #303a2b;
+    padding: 28px;
+    border-radius: 16px;
+}
+
+.todo-box h2 {
+    margin-bottom: 22px;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    background: #10130f;
+    border: 1px solid #3b4932;
+    border-radius: 9px;
+    color: white;
+    outline: none;
+    font-size: 15px;
+}
+
+input:focus {
+    border-color: #a4bd72;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 9px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+#addBtn {
+    background: #a4bd72;
+    color: #10130f;
+    padding: 0 20px;
+    font-weight: bold;
+}
+
+#addBtn:hover {
+    background: #bedb89;
+    transform: translateY(-2px);
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.filter {
+    padding: 9px 16px;
+    color: #b6bcb0;
+    background: #292f26;
+}
+
+.filter.active {
+    background: #a4bd72;
+    color: #10130f;
+}
+
+#taskList {
+    list-style: none;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px;
+    margin-bottom: 10px;
+    background: #252c22;
+    border: 1px solid #343e2e;
+    border-radius: 10px;
+    animation: appear 0.3s ease;
+}
+
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.task input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #a4bd72;
+    flex-shrink: 0;
+}
+
+.task span {
+    overflow-wrap: anywhere;
+}
+
+.task.completed span {
+    text-decoration: line-through;
+    color: #7c8476;
+}
+
+.delete-btn {
+    background: #49302d;
+    color: #ffaaa0;
+    padding: 8px 12px;
+    flex-shrink: 0;
+}
+
+.delete-btn:hover {
+    background: #633a35;
+}
+
+#emptyMessage {
+    color: #858e7e;
+    text-align: center;
+    padding: 20px;
+}
+
+.progress-section {
+    margin-top: 30px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #b5bcae;
+    font-size: 14px;
+}
+
+.progress-bar {
+    height: 9px;
+    background: #343d2e;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progressFill {
+    height: 100%;
+    width: 0%;
+    background: #a4bd72;
+    border-radius: 20px;
+    transition: width 0.4s;
+}
+
+footer {
+    text-align: center;
+    color: #737c6c;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 550px) {
+    body {
+        padding: 25px 12px;
+    }
+
+    .dashboard {
+        gap: 8px;
+    }
+
+    .stat-card {
+        padding: 14px 10px;
+    }
+
+    .stat-card h3 {
+        font-size: 23px;
+    }
+
+    .todo-box {
+        padding: 18px;
+    }
+
+    .input-area {
+        flex-direction: column;
+    }
+
+    #addBtn {
+        padding: 13px;
+    }
+}

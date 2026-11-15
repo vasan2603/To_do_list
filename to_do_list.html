@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - To Do List</title>
+    <link rel="stylesheet" href="to_do_list.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Task<span>Flow.</span></h1>
+            <p>Your productivity, organized.</p>
+        </header>
+
+        <section class="dashboard">
+            <div class="stat-card">
+                <h3 id="totalTasks">0</h3>
+                <p>Total Tasks</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="completedTasks">0</h3>
+                <p>Completed</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="pendingTasks">0</h3>
+                <p>Pending</p>
+            </div>
+        </section>
+
+        <section class="todo-box">
+
+            <h2>My Tasks</h2>
+
+            <div class="input-area">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What needs to be done?"
+                >
+                <button id="addBtn">+ Add Task</button>
+            </div>
+
+            <div class="filters">
+                <button class="filter active" data-filter="all">All</button>
+                <button class="filter" data-filter="pending">Pending</button>
+                <button class="filter" data-filter="completed">Completed</button>
+            </div>
+
+            <ul id="taskList"></ul>
+
+            <p id="emptyMessage">No tasks yet. Add your first task!</p>
+
+            <div class="progress-section">
+                <div class="progress-info">
+                    <span>Overall Progress</span>
+                    <span id="progressText">0%</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div id="progressFill"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            Made with focus. Stay productive.
+        </footer>
+
+    </div>
+
+    <script src="to_do_list.js"></script>
+</body>
+</html>
